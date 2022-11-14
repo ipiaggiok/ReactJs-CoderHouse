@@ -1,5 +1,5 @@
 html {
-  background: linear-gradient(to right, #aa076b, #61045f) no-repeat center
+  background: linear-gradient(to right, #373737, #1a1a1a) no-repeat center
     center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -25,7 +25,7 @@ html {
 }
 .logo1 {
   font-family: "Anton", sans-serif;
-  color: rgb(178, 8, 149);
+  color: rgb(101, 101, 101);
 }
 
 .logo2 {
@@ -38,4 +38,62 @@ html {
 
 .cartIcon {
   margin: 0 10px;
+}
+
+.counterIcon {
+  background-color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.counterContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  column-gap: 30px;
+}
+
+.quantityBtns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background: #d7d4d4;
+  width: 89px;
+  height: 26px;
+  border-radius: 10px;
+}
+
+.countNumber {
+  padding: 15px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  column-gap: 50px;
+  row-gap: 50px;
+  margin: 15px;
+}
+
+.itemCard:hover {
+  transform: scale(1.04);
+}
+
+.progressComp {
+  justify-content: center;
+  padding: 15px;
+}
+
+.cardBottom {
+  justify-content: space-between;
+}
+
+.infoDetails {
+  display: flex;
+  margin: 20px;
+  column-gap: 20px;
 }
