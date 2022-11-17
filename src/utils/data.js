@@ -31,7 +31,7 @@ export const data = [
   },
   {
     id: 3,
-    titulo: "Cerveza Imperial IPA Lata 473cc",
+    titulo: "Cerveza Imperial India Pale Ale Lata 473cc",
     categoriaId: 3,
     bebida: "Cerveza",
     marca: "Imperial",

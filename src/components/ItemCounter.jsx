@@ -29,7 +29,7 @@ const ItemCounter = () => {
           <AddIcon className="counterIcon" onClick={increaseQty} />
         </div>
         <div>
-          <Button variant="outlined" color="inherit">
+          <Button variant="outlined" sx={{ color: "#d7d7d7" }}>
             Agregar al carrito
           </Button>
         </div>

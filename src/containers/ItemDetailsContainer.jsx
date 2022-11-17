@@ -18,11 +18,7 @@ const ItemDetailsContainer = () => {
       .catch((rej) => console.log(rej));
   });
 
-  return (
-    <>
-      <ItemDetails item={dato} />
-    </>
-  );
+  return <ItemDetails item={dato} />;
 };
 
 export default ItemDetailsContainer;

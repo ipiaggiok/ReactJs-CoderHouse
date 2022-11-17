@@ -97,3 +97,15 @@ html {
   margin: 20px;
   column-gap: 20px;
 }
+
+.descTitle {
+  color: #d9d7d7;
+}
+
+.descBody {
+  color: #9b9999;
+}
+
+.descPrice {
+  color: #d1d1d1;
+}

@@ -3,6 +3,7 @@ import { data } from "../utils/data";
 import customFetch from "../utils/customFetch";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import LineProgress from "../components/LineProgress";
 
 const ItemListContainer = () => {
   const [datos, setDatos] = useState([]);
@@ -23,9 +24,13 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div className="cardsContainer">
-        <ItemList items={datos} />
-      </div>
+      {datos === undefined ? (
+        <div className="cardsContainer">
+          <ItemList items={datos} />
+        </div>
+      ) : (
+        <LineProgress />
+      )}
     </>
   );
 };
