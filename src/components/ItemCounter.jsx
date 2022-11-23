@@ -3,11 +3,13 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import Button from "@mui/material/Button";
 
-const ItemCounter = () => {
+const ItemCounter = ({ stock = 0, onAdd }) => {
   const [quantity, setQuantity] = useState(1);
 
   const increaseQty = () => {
-    setQuantity(quantity + 1);
+    if (quantity < stock) {
+      setQuantity(quantity + 1);
+    }
   };
 
   const decreaseQty = () => {
@@ -29,9 +31,19 @@ const ItemCounter = () => {
           <AddIcon className="counterIcon" onClick={increaseQty} />
         </div>
         <div>
-          <Button variant="outlined" sx={{ color: "#d7d7d7" }}>
-            Agregar al carrito
-          </Button>
+          {stock > 0 ? (
+            <Button
+              variant="outlined"
+              sx={{ color: "#d7d7d7" }}
+              onClick={() => onAdd(quantity)}
+            >
+              Agregar al carrito
+            </Button>
+          ) : (
+            <Button variant="outlined" disabled>
+              Agregar al carrito
+            </Button>
+          )}
         </div>
       </div>
     </>

@@ -24,12 +24,12 @@ const ItemListContainer = () => {
 
   return (
     <>
-      {datos === undefined ? (
+      {datos.length === 0 ? (
+        <LineProgress />
+      ) : (
         <div className="cardsContainer">
           <ItemList items={datos} />
         </div>
-      ) : (
-        <LineProgress />
       )}
     </>
   );

@@ -8,6 +8,7 @@ export const data = [
     estilo: "Lager",
     tipo: "Lata",
     tamaño: "473cc",
+    stock: 5,
     precio: 222,
     imagen:
       "https://cdn.shopify.com/s/files/1/0556/6971/9230/products/MLA920766090_720x.png?v=1622091897",
@@ -23,6 +24,7 @@ export const data = [
     estilo: "Cream Stout",
     tipo: "Lata",
     tamaño: "473cc",
+    stock: 7,
     precio: 243,
     imagen:
       "https://cdn.shopify.com/s/files/1/0556/6971/9230/products/MLA920760849_720x.png?v=1622091878",
@@ -38,6 +40,7 @@ export const data = [
     estilo: "IPA India Pale Ale",
     tipo: "Lata",
     tamaño: "473cc",
+    stock: 3,
     precio: 243,
     imagen:
       "https://cdn.shopify.com/s/files/1/0556/6971/9230/products/MLA920764459_720x.png?v=1622091899",
@@ -53,6 +56,7 @@ export const data = [
     estilo: "Malbec",
     tipo: "Botella",
     tamaño: "750cc",
+    stock: 10,
     precio: 850,
     imagen:
       "https://cdn.shopify.com/s/files/1/0556/6971/9230/products/MLA920772012_720x.png?v=1622092177",
@@ -68,6 +72,7 @@ export const data = [
     estilo: "Cabernet Sauvignon",
     tipo: "Botella",
     tamaño: "750cc",
+    stock: 9,
     precio: 680,
     imagen:
       "https://cdn.shopify.com/s/files/1/0556/6971/9230/products/MLA920770716_720x.png?v=1622092159",
@@ -83,6 +88,7 @@ export const data = [
     estilo: "Chardonnay Blanco",
     tipo: "Botella",
     tamaño: "750cc",
+    stock: 12,
     precio: 850,
     imagen:
       "https://cdn.shopify.com/s/files/1/0556/6971/9230/products/MLA920770729_1080x.png?v=1622092175",
@@ -98,6 +104,7 @@ export const data = [
     estilo: "Cabernet Sauvignon",
     tipo: "Botella",
     tamaño: "750cc",
+    stock: 3,
     precio: 850,
     imagen:
       "https://cdn.shopify.com/s/files/1/0556/6971/9230/products/MLA920772014_1080x.png?v=1622092173",
@@ -113,6 +120,7 @@ export const data = [
     estilo: "Dulce De Leche",
     tipo: "Botella",
     tamaño: "700cc",
+    stock: 4,
     precio: 220,
     imagen:
       "https://cdn.shopify.com/s/files/1/0556/6971/9230/products/MLA927707775_720x.png?v=1625663826",
@@ -128,6 +136,7 @@ export const data = [
     estilo: "Chocolate",
     tipo: "Botella",
     tamaño: "700cc",
+    stock: 2,
     precio: 220,
     imagen:
       "https://cdn.shopify.com/s/files/1/0556/6971/9230/products/MLA927707773_720x.png?v=1625663827",
@@ -143,6 +152,7 @@ export const data = [
     estilo: "Al Coñac",
     tipo: "Botella",
     tamaño: "700cc",
+    stock: 5,
     precio: 220,
     imagen:
       "https://cdn.shopify.com/s/files/1/0556/6971/9230/products/MLA927707785_720x.png?v=1625663830",
@@ -158,6 +168,7 @@ export const data = [
     estilo: "Nobel",
     tipo: "Botella",
     tamaño: "750cc",
+    stock: 9,
     precio: 3240,
     imagen:
       "https://cdn.shopify.com/s/files/1/0556/6971/9230/products/MLA921115327_1080x.png?v=1622092339",
