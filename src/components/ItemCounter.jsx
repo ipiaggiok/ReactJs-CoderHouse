@@ -3,8 +3,12 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import Button from "@mui/material/Button";
 
-const ItemCounter = ({ stock = 0, onAdd }) => {
-  const [quantity, setQuantity] = useState(1);
+const ItemCounter = ({ stock = 0, initial = 0, onAdd }) => {
+  const [quantity, setQuantity] = useState(0);
+
+  useEffect(() => {
+    setQuantity(initial)
+  },[initial]);
 
   const increaseQty = () => {
     if (quantity < stock) {
@@ -13,14 +17,12 @@ const ItemCounter = ({ stock = 0, onAdd }) => {
   };
 
   const decreaseQty = () => {
-    if (quantity > 1) {
+    if (quantity > initial) {
       setQuantity(quantity - 1);
     }
   };
 
-  useEffect(() => {
-    console.log("El comoponente se actualizó");
-  }, [quantity]);
+ 
 
   return (
     <>
@@ -30,13 +32,15 @@ const ItemCounter = ({ stock = 0, onAdd }) => {
           <h4 className="countNumber">{quantity}</h4>
           <AddIcon className="counterIcon" onClick={increaseQty} />
         </div>
+
         <div>
-          {stock > 0 ? (
+          {stock && quantity
+           ? (
             <Button
               variant="outlined"
-              sx={{ color: "#d7d7d7" }}
+              color="secondary"
               onClick={() => onAdd(quantity)}
-            >
+              >
               Agregar al carrito
             </Button>
           ) : (

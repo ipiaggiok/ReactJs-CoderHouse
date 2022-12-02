@@ -57,7 +57,7 @@ const NavBar = () => {
           </NavLink>
         </div>
         <div className="cartIcon">
-          <CartWidget cantidad="3" />
+          <NavLink to="/cart" style={{textDecoration: "none"}}> <CartWidget/></NavLink>
         </div>
       </div>
     </>

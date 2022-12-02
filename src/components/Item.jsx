@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 const Item = ({ id, title, imgUrl, price }) => {
   return (
     <>
-      <Card sx={{ maxWidth: 400 }} style={{ borderRadius: 20 }}>
-        <CardMedia component="img" height="400" image={imgUrl} alt="" />
+      <Card sx={{ maxWidth: 350, alignItems: "center" }} style={{ borderRadius: 20 }}>
+        <CardMedia component="img" height="375" image={imgUrl} alt="product image" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {title}.
@@ -23,7 +23,7 @@ const Item = ({ id, title, imgUrl, price }) => {
             ${price}
           </Typography>
           <Link to={`/item/${id}`}>
-            <Button size="small" color="primary" variant="outlined">
+            <Button size="small" color="primary" variant="outlined" style={{textDecoration: "none"}}>
               Mostrar más
             </Button>
           </Link>

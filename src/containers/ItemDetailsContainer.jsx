@@ -11,7 +11,7 @@ const ItemDetailsContainer = () => {
   //componentDidUpdate
   useEffect(() => {
     customFetch(
-      2000,
+      0,
       data.find((element) => element.id === parseInt(idItem))
     )
       .then((res) => setDato(res))

@@ -7,6 +7,10 @@ html {
   background-size: cover;
 }
 
+* {
+  font-family: "roboto", sans-serif;
+}
+
 .navbar {
   background: rgb(125, 49, 133);
   background: linear-gradient(
@@ -17,6 +21,8 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 25px;
+
 }
 
 .logoContainer {
@@ -80,6 +86,7 @@ html {
 }
 
 .itemCard:hover {
+  transition: 0.5s;
   transform: scale(1.04);
 }
 
@@ -108,4 +115,24 @@ html {
 
 .descPrice {
   color: #d1d1d1;
+}
+
+.itemsCart {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  margin: 10px;
+}
+
+.cartContainer {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divTotalPrice {
+  background: #b027b05c;
+  color: rgb(203, 199, 199);
+  border-radius: 10px;
+  padding: 0 15px;
 }

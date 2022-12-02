@@ -8,17 +8,23 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "../containers/ItemDetailsContainer";
+import Cart from "../components/Cart"
+import CartContextProvider from "../components/CartContext";
+
 
 const Home = () => {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer />} />
-        <Route path="/category/:categoriaId" element={<ItemListContainer />} />
-        <Route path="/item/:idItem" element={<ItemDetailContainer />} />
-      </Routes>
-    </BrowserRouter>
+    <CartContextProvider>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:categoriaId" element={<ItemListContainer />} />
+          <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<Cart/>}/>
+        </Routes>
+      </BrowserRouter>
+    </CartContextProvider>
   );
 };
 
