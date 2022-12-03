@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import Tooltip from '@mui/material/Tooltip';
 
 const Cart = () => {
 
@@ -20,7 +21,7 @@ const Cart = () => {
                     <Link to="/" style={{textDecoration: "none"}}> <Button  variant="contained" color="secondary">Ver Productos</Button></Link></div> )
                 :  (
                     cartList.map( e => <div className="itemsCart" key={e.id}>
-                    <DeleteOutlinedIcon color="secondary" onClick={() => removeItem(e.id)} style={{cursor:"pointer", fontSize:"40px"}}/>
+                    <Tooltip title="Eliminar"><DeleteOutlinedIcon color="secondary" onClick={() => removeItem(e.id)} style={{cursor:"pointer", fontSize:"40px"}}/></Tooltip>
                     <img src={e.imagen} alt="" style={{ borderRadius: "10px", width:"140px" }} />
                     <h1 style={{color:"white", fontSize:"25px"}}>   {e.titulo} - {e.qtyItem} unidad/es - Sub-Total ${e.precio * e.qtyItem}</h1></div>)   
                 )
