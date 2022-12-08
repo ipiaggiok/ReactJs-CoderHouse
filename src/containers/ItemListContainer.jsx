@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Box from "@mui/material/Box";
 import LinearProgress from "@mui/material/LinearProgress";
-import { db } from "../utils/firebaseConfig"
-import { collection, getDocs } from "firebase/firestore"; 
+import { fetchData } from "../utils/firestoreUtil";
 
 
 const ItemListContainer = () => {
@@ -13,13 +12,9 @@ const ItemListContainer = () => {
 
   //componentDidUpdate
   useEffect(() => {
-      const fetchData = async () => {
-        const querySnapshot = await getDocs(collection( db, "products"));
-        querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-      });
-  };
-  fetchData();
+      fetchData(categoriaId)
+        .then(res => setDatos(res))
+        .catch(err => console.log(err))
   }, [categoriaId]);
 
   return (

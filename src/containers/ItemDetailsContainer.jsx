@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ItemDetails from "../components/ItemDetails";
-import { data } from "../utils/data.js";
-import customFetch from "../utils/customFetch";
 import { useParams } from "react-router-dom";
+import { firestoreFetchItem } from "../utils/firestoreUtil"
 
 const ItemDetailsContainer = () => {
   const [dato, setDato] = useState({});
@@ -10,10 +9,7 @@ const ItemDetailsContainer = () => {
 
   //componentDidUpdate
   useEffect(() => {
-    customFetch(
-      0,
-      data.find((element) => element.id === parseInt(idItem))
-    )
+    firestoreFetchItem(idItem)
       .then((res) => setDato(res))
       .catch((rej) => console.log(rej));
   });

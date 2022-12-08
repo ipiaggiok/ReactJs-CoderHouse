@@ -1,11 +1,10 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom"
 import ItemCounter from "./ItemCounter";
 import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import { useContext } from "react";
 import { CartContext } from "./CartContext";
 
 
